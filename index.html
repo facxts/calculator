@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .app {
+      background: #222;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      width: 350px;
+      padding: 20px;
+      color: white;
+    }
+    .tabs {
+      display: flex;
+      margin-bottom: 15px;
+    }
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      background: #333;
+      border-radius: 10px 10px 0 0;
+    }
+    .tab.active {
+      background: #007aff;
+    }
+    .panel {
+      display: none;
+    }
+    .panel.active {
+      display: block;
+    }
+    .display {
+      background: #000;
+      color: #0f0;
+      font-size: 2em;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: right;
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    button {
+      padding: 20px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      background: #444;
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover { background: #666; }
+    .operator { background: #ff9500; }
+    .operator:hover { background: #ffa733; }
+    .special { background: #007aff; }
+    .special:hover { background: #3399ff; }
+    .converter input, .converter select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+    }
+    .converter button {
+      width: 100%;
+      margin-top: 10px;
+      background: #007aff;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="tabs">
+      <div class="tab active" onclick="showPanel('calc')">Calculator</div>
+      <div class="tab" onclick="showPanel('currency')">Currency</div>
+    </div>
+
+    <!-- Calculator Panel -->
+    <div id="calc" class="panel active">
+      <div class="display" id="display">0</div>
+      <div class="buttons">
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="appendOperator('%')" class="operator">%</button>
+        <button onclick="appendOperator('//')" class="operator">//</button>
+        <button onclick="appendOperator('/')" class="operator">÷</button>
+
+        <button onclick="appendNumber(7)">7</button>
+        <button onclick="appendNumber(8)">8</button>
+        <button onclick="appendNumber(9)">9</button>
+        <button onclick="appendOperator('*')" class="operator">×</button>
+
+        <button onclick="appendNumber(4)">4</button>
+        <button onclick="appendNumber(5)">5</button>
+        <button onclick="appendNumber(6)">6</button>
+        <button onclick="appendOperator('-')" class="operator">−</button>
+
+        <button onclick="appendNumber(1)">1</button>
+        <button onclick="appendNumber(2)">2</button>
+        <button onclick="appendNumber(3)">3</button>
+        <button onclick="appendOperator('+')" class="operator">+</button>
+
+        <button onclick="appendNumber(0)">0</button>
+        <button onclick="appendOperator('**')" class="operator">^</button>
+        <button onclick="calculate()" class="special">=</button>
+        <button onclick="sqrt()" class="special">√</button>
+      </div>
+    </div>
+
+    <!-- Currency Converter Panel -->
+    <div id="currency" class="panel">
+      <div class="converter">
+        <input type="number" id="amount" placeholder="Enter amount">
+        <select id="fromCurrency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="QAR">QAR</option>
+        </select>
+        <select id="toCurrency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="QAR">QAR</option>
+        </select>
+        <button onclick="convertCurrency()">Convert</button>
+        <div id="conversionResult" style="margin-top:10px; font-size:1.2em;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tab switching
+    function showPanel(panelId) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(panel => panel.classList.remove('active'));
+      document.querySelector(`.tab[onclick="showPanel('${panelId}')"]`).classList.add('active');
+      document.getElementById(panelId).classList.add('active');
+    }
+
+    // Calculator logic
+    let display = document.getElementById("display");
+    let currentInput = "";
+
+    function appendNumber(num) {
+      currentInput += num;
+      display.textContent = currentInput;
+    }
+    function appendOperator(op) {
+      currentInput += " " + op + " ";
+      display.textContent = currentInput;
+    }
+    function clearDisplay() {
+      currentInput = "";
+      display.textContent = "0";
+    }
+    function calculate() {
+      try {
+        if (currentInput.includes("//")) {
+          let parts = currentInput.split("//");
+          let result = Math.floor(eval(parts[0]) / eval(parts[1]));
+          display.textContent = result;
+          currentInput = result.toString();
+          return;
+        }
+        let result = eval(currentInput);
+        display.textContent = result;
+        currentInput = result.toString();
+      } catch {
+        display.textContent = "Error";
+        currentInput = "";
+      }
+    }
+    function sqrt() {
+      try {
+        let result = Math.sqrt(eval(currentInput));
+        display.textContent = result;
+        currentInput = result.toString();
+      } catch {
+        display.textContent = "Error";
+        currentInput = "";
+      }
+    }
+
+    // Currency converter logic
+    const rates = {
+      "USD": {"USD": 1, "EUR": 0.92, "GBP": 0.78, "QAR": 3.64},
+      "EUR": {"USD": 1.09, "EUR": 1, "GBP": 0.85, "QAR": 3.95},
+      "GBP": {"USD": 1.28, "EUR": 1.18, "GBP": 1, "QAR": 4.65},
+      "QAR": {"USD": 0.27, "EUR": 0.25, "GBP": 0.21, "QAR": 1}
+    };
+
+    function convertCurrency() {
+      let amount = parseFloat(document.getElementById("amount").value);
+      let from = document.getElementById("fromCurrency").value;
+      let to = document.getElementById("toCurrency").value;
+
+      if (isNaN(amount)) {
+        document.getElementById("conversionResult").textContent = "Enter a valid amount.";
+        return;
+      }
+      let result = amount * rates[from][to];
+      document.getElementById("conversionResult").textContent = `${amount} ${from} = ${result.toFixed(2)} ${to}`;
+    }
+  </script>
+</body>
+</html>
