@@ -19,10 +19,9 @@ A sleek, browser-based calculator that goes beyond basic arithmetic — combinin
 - JavaScript (Vanilla)
 - Deployed on [Netlify](https://www.netlify.com/)
 
-
 ## 📸 Preview
 
-![Smart Calculator Screenshot](assets/screenshot.png)
+![Smart Calculator Screenshot](screenshot.png)
 
 ## 📄 License
 
