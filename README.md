@@ -22,7 +22,7 @@ A sleek, browser-based calculator that goes beyond basic arithmetic — combinin
 
 ## 📸 Preview
 
-**
+![Smart Calculator Screenshot](assets/screenshot.png)
 
 ## 📄 License
 
