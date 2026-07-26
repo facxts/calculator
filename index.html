@@ -202,11 +202,15 @@
     }
 
     // Currency converter logic
+    // Static exchange rates, updated as of late July 2026.
+    // These are fixed values for demo purposes, not a live feed, so they
+    // will drift out of date over time. For production use, this should
+    // call a live exchange-rate API instead.
     const rates = {
-      "USD": {"USD": 1, "EUR": 0.92, "GBP": 0.78, "QAR": 3.64},
-      "EUR": {"USD": 1.09, "EUR": 1, "GBP": 0.85, "QAR": 3.95},
-      "GBP": {"USD": 1.28, "EUR": 1.18, "GBP": 1, "QAR": 4.65},
-      "QAR": {"USD": 0.27, "EUR": 0.25, "GBP": 0.21, "QAR": 1}
+      "USD": {"USD": 1, "EUR": 0.8790, "GBP": 0.7477, "QAR": 3.6455},
+      "EUR": {"USD": 1.1377, "EUR": 1, "GBP": 0.8506, "QAR": 4.1480},
+      "GBP": {"USD": 1.3374, "EUR": 1.1755, "GBP": 1, "QAR": 4.8760},
+      "QAR": {"USD": 0.2743, "EUR": 0.2411, "GBP": 0.2051, "QAR": 1}
     };
 
     function convertCurrency() {
