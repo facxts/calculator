@@ -1,40 +1,41 @@
-# 🧮 Smart Calculator
+# Smart Calculator
 
-A sleek, browser-based calculator that goes beyond basic arithmetic — combining everyday calculations with a built-in currency converter.
+## What is this project?
 
-**🔗 Live Demo:** [calculator-project-qt.netlify.app](https://calculator-project-qt.netlify.app/)
+This started as a calculator I coded in Python, which I then turned into a smart calculator web app. The currency conversion side is meant to help tourists exchange currencies easily, without needing to search for and download a separate app.
 
-## ✨ Features
+**Live Demo:** [calculator-project-qt.netlify.app](https://calculator-project-qt.netlify.app/)
 
-- **Standard arithmetic** — addition, subtraction, multiplication, division
-- **Advanced operations** — percentage (%), power (^), square root (√), integer division (//)
-- **Currency converter** — convert between USD, EUR, GBP, and QAR right inside the calculator
-- **Clean, responsive UI** — works smoothly on desktop and mobile
-- **Instant results** — no page reloads, everything calculates in real time
+## Features
 
-## 🛠️ Built With
+- Basic math operations (addition, subtraction, multiplication, division)
+- Absolute value of a number
+- Square root of a number
+- Number inverse (additive inverse)
+- Currency converter — I chose a specific set of currencies (USD, EUR, GBP, QAR) to keep it simple
+- Note: the Python version of this project also keeps a history of past calculations. That history feature isn't currently on the website version.
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- Deployed on [Netlify](https://www.netlify.com/)
+## Tech Used
 
-## 🧠 Development Process
+- HTML
+- CSS
+- JavaScript
+- Originally built and tested in Python first
 
-This calculator was originally built and tested in **Python**, working out the core logic for the arithmetic and conversion features. It was then converted into a web app, using AI assistance to design the UI and translate the logic into HTML, CSS, and JavaScript.
+## Challenges
 
-## 📸 Preview of example trying out the calculator:
+Honestly, one of the harder parts was getting the `f`-string formatting right in Python — I kept getting confused about where it was going wrong in certain lines. Indexing numbers correctly was also tricky to get right.
 
-![Smart Calculator Screenshot](screenshot.png)
+I also ran into some rough patches trying different calculator designs — I kept hitting 404 errors and didn't know how to properly get the project onto GitHub Pages at the time, so I ended up deploying with Netlify instead.
 
-## 📑 Presentation
+## What I'm proud of
 
-Check out the full project presentation [here](docs/Smart-calculator-edited.pdf).
+I'm really proud of turning simple code into an actual live website. After going through the Star Dance Challenge's HTML lesson, I got so excited about finally understanding HTML that I rushed to get this onto GitHub. This was originally supposed to be a group project, but none of my teammates ended up contributing — everyone seemed to have an excuse. So I ended up building this entirely on my own, even while traveling, and I'm proud I saw it through by myself.
 
-## 📄 License
+## AI Usage
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/facxts/calculator/blob/main/LICENSE) file for details.
+I used AI (Claude) to help turn my HTML file into an actual working website — before this project, I didn't really know how to build and deploy my own site. AI also helped me understand Python modules better: what they do and when to use them. I used AI to help fix parts of my code when I got confused or had errors, and to help polish the design and add features I wanted. That said, the overall project — the original Python logic, the decisions about what this calculator should do, and the reflections in this README — are mine.
 
-## 🙋 Author
+## Author
 
 Made by [facxts](https://github.com/facxts)
