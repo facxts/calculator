@@ -44,7 +44,7 @@ You don't need any special setup or dependencies for this project. It is a singl
 
 **Option 1: Just open the file**
 1. Download or clone this repository
-2. Open the `index.html` file directly in your browser (double-click it, or right-click → Open With → your browser)
+2. Open the `index.html` file directly in your browser (double-click it, or right-click -> Open With -> your browser)
 
 **Option 2: Using VS Code + Live Server**
 1. Clone the repository:
