@@ -32,11 +32,15 @@ Getting the f-string formatting right in Python confused me for a while, and ind
 
 ## AI Usage
 
-I wrote the original Python code myself. AI helped me with the f-string formatting, since I got confused there, and it also helped me understand some of the modules I used, though I didn't just take AI's word for it, I went and searched on my own to see how other people approached similar calculator projects to understand it better myself. For the website version, I asked AI to help convert my design, which went through around 5 different attempts, into an actual working layout, and to help turn my original calculator logic into real HTML, CSS, and JavaScript code. I also used AI to help clean up and organize the wording of this README itself, catch a couple of incorrect exchange rates in my currency converter, and set up the instructions below for running the project locally.
+I wrote the original Python code myself. AI helped me with the f-string formatting, since I got confused there, and it also helped me understand some of the modules I used, though I didn't just take AI's word for it, I went and searched on my own to see how other people approached similar calculator projects to understand it better myself.
+
+For the website version, I didn't know HTML, CSS, or JavaScript yet, so I had AI build the actual website for me, including the design and layout. I went through about 5 different prototypes before landing on the final version, which is what's live now. After completing the Star Dance Challenge's HTML lesson, I learned how the code actually works and can now read and understand it myself.
+
+I also used AI to help clean up and organize the wording of this README, catch a couple of incorrect exchange rates in my currency converter, and set up the instructions below for running the project locally.
 
 ## Running Locally
 
-You don't need any special setup or dependencies for this project — it's a single static HTML file.
+You don't need any special setup or dependencies for this project. It is a single static HTML file.
 
 **Option 1: Just open the file**
 1. Download or clone this repository
@@ -47,8 +51,8 @@ You don't need any special setup or dependencies for this project — it's a sin
    ```
    git clone https://github.com/facxts/calculator.git
    ```
-2. Open the folder in VS Code
-3. Install the "Live Server" extension if you don't already have it
+2. Open the folder in VS Code.
+3. Install the "Live Server" extension if you don't already have it.
 4. Right-click `index.html` and choose "Open with Live Server"
 5. The project will open automatically at a local address like `http://127.0.0.1:5500`
 
@@ -58,7 +62,7 @@ If you want to try the original Python version of the calculator instead of the 
 ```
 python smart_calculator.py
 ```
-(Requires Python 3. No extra libraries needed beyond the standard `math` module.)
+ Make sure you have Python installed in VS Code
 
 ## Live Site
 
