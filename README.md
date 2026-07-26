@@ -1,10 +1,10 @@
 # Smart Calculator
 
-## What is this project?
+This is my Smart Calculator project, built for the Stardance Hack Club challenge.
 
-This started as a calculator I coded in Python, which I then turned into a smart calculator web app. The currency conversion side is meant to help tourists exchange currencies easily, without needing to search for and download a separate app.
+## About
 
-**Live Demo:** [calculator-project-qt.netlify.app](https://calculator-project-qt.netlify.app/)
+A calculator I originally coded in Python, then turned into a web app. The currency conversion side is meant to help tourists exchange currencies easily, without needing to search for and download a separate app. It handles basic math, plus square root, absolute value, and number inverse, along with currency conversion between USD, EUR, GBP, and QAR.
 
 ## Features
 
@@ -12,8 +12,12 @@ This started as a calculator I coded in Python, which I then turned into a smart
 - Absolute value of a number
 - Square root of a number
 - Number inverse (additive inverse)
-- Currency converter — I chose a specific set of currencies (USD, EUR, GBP, QAR) to keep it simple
-- Note: the Python version of this project also keeps a history of past calculations. That history feature isn't currently on the website version.
+- Currency converter for a set of common currencies
+- Note: the Python version also keeps a history of past calculations, which isn't currently on the website version
+
+## Currency Rates Note
+
+The exchange rates used in this calculator are static values (checked and corrected as of late July 2026), not a live feed. That means they will slowly go out of date. If you're using this for anything beyond a demo, look up current rates instead of trusting the numbers baked into the code.
 
 ## Tech Used
 
@@ -24,17 +28,41 @@ This started as a calculator I coded in Python, which I then turned into a smart
 
 ## Challenges
 
-Honestly, one of the harder parts was getting the `f`-string formatting right in Python — I kept getting confused about where it was going wrong in certain lines. Indexing numbers correctly was also tricky to get right.
-
-I also ran into some rough patches trying different calculator designs. I kept hitting 404 errors on the github website and didn't know how to properly get the project onto GitHub Pages at the time, so I ended up deploying with Netlify instead.
-
-## What I'm proud of
-
-I'm really proud of turning simple code into an actual live website. After going through the Star Dance Challenge's HTML lesson, I got so excited about finally understanding HTML that I rushed to get this onto GitHub. This was originally supposed to be a group project, but none of my teammates ended up contributing. everyone seemed to have an excuse. So I ended up building this entirely on my own, even while traveling, and I'm proud I saw it through by myself.
+Getting the f-string formatting right in Python confused me for a while, and indexing numbers correctly was tricky too. I also went through a few different design attempts and ran into 404 errors trying to figure out GitHub Pages, so I ended up deploying with Netlify instead.
 
 ## AI Usage
 
-I used AI (Claude) to help turn my HTML file into an actual working website, before this project, I didn't really know how to build and deploy my own site. AI also helped me understand Python modules better: what they do and when to use them. I used AI to help fix parts of my code when I got confused or had errors, and to help polish the design and add features I wanted. That said, the overall project, the original Python logic, the decisions about what this calculator should do, and the reflections in this README are mine.
+I wrote the original Python code myself. AI helped me with the f-string formatting, since I got confused there, and it also helped me understand some of the modules I used, though I didn't just take AI's word for it, I went and searched on my own to see how other people approached similar calculator projects to understand it better myself. For the website version, I asked AI to help convert my design, which went through around 5 different attempts, into an actual working layout, and to help turn my original calculator logic into real HTML, CSS, and JavaScript code. I also used AI to help clean up and organize the wording of this README itself, catch a couple of incorrect exchange rates in my currency converter, and set up the instructions below for running the project locally.
+
+## Running Locally
+
+You don't need any special setup or dependencies for this project — it's a single static HTML file.
+
+**Option 1: Just open the file**
+1. Download or clone this repository
+2. Open the `index.html` file directly in your browser (double-click it, or right-click → Open With → your browser)
+
+**Option 2: Using VS Code + Live Server**
+1. Clone the repository:
+   ```
+   git clone https://github.com/facxts/calculator.git
+   ```
+2. Open the folder in VS Code
+3. Install the "Live Server" extension if you don't already have it
+4. Right-click `index.html` and choose "Open with Live Server"
+5. The project will open automatically at a local address like `http://127.0.0.1:5500`
+
+**Running the Python version**
+
+If you want to try the original Python version of the calculator instead of the web version:
+```
+python smart_calculator.py
+```
+(Requires Python 3. No extra libraries needed beyond the standard `math` module.)
+
+## Live Site
+
+https://calculator-project-qt.netlify.app/
 
 ## Author
 
