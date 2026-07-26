@@ -26,15 +26,15 @@ This started as a calculator I coded in Python, which I then turned into a smart
 
 Honestly, one of the harder parts was getting the `f`-string formatting right in Python — I kept getting confused about where it was going wrong in certain lines. Indexing numbers correctly was also tricky to get right.
 
-I also ran into some rough patches trying different calculator designs — I kept hitting 404 errors and didn't know how to properly get the project onto GitHub Pages at the time, so I ended up deploying with Netlify instead.
+I also ran into some rough patches trying different calculator designs. I kept hitting 404 errors on the github website and didn't know how to properly get the project onto GitHub Pages at the time, so I ended up deploying with Netlify instead.
 
 ## What I'm proud of
 
-I'm really proud of turning simple code into an actual live website. After going through the Star Dance Challenge's HTML lesson, I got so excited about finally understanding HTML that I rushed to get this onto GitHub. This was originally supposed to be a group project, but none of my teammates ended up contributing — everyone seemed to have an excuse. So I ended up building this entirely on my own, even while traveling, and I'm proud I saw it through by myself.
+I'm really proud of turning simple code into an actual live website. After going through the Star Dance Challenge's HTML lesson, I got so excited about finally understanding HTML that I rushed to get this onto GitHub. This was originally supposed to be a group project, but none of my teammates ended up contributing. everyone seemed to have an excuse. So I ended up building this entirely on my own, even while traveling, and I'm proud I saw it through by myself.
 
 ## AI Usage
 
-I used AI (Claude) to help turn my HTML file into an actual working website — before this project, I didn't really know how to build and deploy my own site. AI also helped me understand Python modules better: what they do and when to use them. I used AI to help fix parts of my code when I got confused or had errors, and to help polish the design and add features I wanted. That said, the overall project — the original Python logic, the decisions about what this calculator should do, and the reflections in this README — are mine.
+I used AI (Claude) to help turn my HTML file into an actual working website, before this project, I didn't really know how to build and deploy my own site. AI also helped me understand Python modules better: what they do and when to use them. I used AI to help fix parts of my code when I got confused or had errors, and to help polish the design and add features I wanted. That said, the overall project, the original Python logic, the decisions about what this calculator should do, and the reflections in this README are mine.
 
 ## Author
 
